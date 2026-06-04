@@ -1,0 +1,20 @@
+# Camera & Lens Cosmetic Quality-Control — YOLO dataset config
+# Replaces the original big_cola.yaml. Paths point at the augmented dataset
+# produced by the pipeline (adjust `path` to your environment).
+
+path: ./data/augmented        # dataset root
+train: train.txt              # newline-separated image paths (relative to path)
+val: val.txt
+
+nc: 10
+names:
+  0: pristine          # no visible cosmetic/optical defect (the "reference" class)
+  1: body_scratch      # scratches / scuffs on body, barrel, or filter ring
+  2: paint_wear        # brassing / paint loss, typically on edges and mounts
+  3: dent              # dents / dings on body, barrel, or filter thread
+  4: lens_scratch      # scratch or mark on a front/rear glass element
+  5: internal_dust     # dust specks visible inside the lens elements
+  6: fungus            # fungal growth (web/branch pattern) inside the lens
+  7: haze              # internal haze / cloudiness on the elements
+  8: coating_damage    # coating scratches, marks, oil, or cleaning marks
+  9: screen_damage     # scratches / cracks on LCD or top display

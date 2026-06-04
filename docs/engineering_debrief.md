@@ -1,4 +1,13 @@
-# Engineering Debrief — Big Cola Bottle Quality Control Pipeline
+# Engineering Debrief — Inherited Pipeline (Bottle QC)
+
+> **Inherited reference.** This debrief documents the six bugs found and fixed in
+> the **source** Big Cola bottle-QC pipeline that this project's scaffold is
+> adapted from. It is kept verbatim because every one of these lessons (idempotent
+> output dirs, float-class-ID parsing, leakage-safe handling, conservative
+> augmentation, no silent fallbacks, dynamic path resolution) applies directly to
+> the camera/lens pipeline once the dataset is built. The camera/lens-specific
+> augmentation caveats (blur erasing scratches, hue shifts faking haze) are noted
+> in [dataset_card.md](dataset_card.md).
 
 ## Overview
 
